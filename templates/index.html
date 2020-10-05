@@ -1,0 +1,11 @@
+<html>
+<head>
+<script>
+const websocket = new WebSocket('ws://127.0.0.1:8000/socket')
+websocket.onmessage = function (evt) {
+  console.log(evt.data)
+}
+</script>
+</head>
+<body></body>
+</html>
