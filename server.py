@@ -44,7 +44,7 @@ change_stream = None
 async def watch(collection):
     global change_stream
 
-    async with collection.watch() as change_stream:
+    async with collection.watch(full_document='updateLookup') as change_stream:
         async for change in change_stream:
             ChangesHandler.on_change(change)
 
